@@ -1,0 +1,34 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlserver"
+    url      = env("DATABASE_URL")
+}
+
+model UserAccount {
+    id        Int      @id @default(autoincrement())
+    uid       String   @unique
+    createdAt DateTime @default(now())
+
+    email    String @unique
+    username String @unique
+
+    // Reemplazamos el enum con un String
+    role      String  // Puede ser "user", "admin", etc.
+
+    posts     Post[]
+}
+
+model Post {
+    id        Int      @id @default(autoincrement())
+    createdAt DateTime @default(now())
+
+    user      UserAccount @relation(fields: [ownerId], references: [id])
+    ownerId   Int
+
+    title     String
+
+    @@index([ownerId])
+}
