@@ -8,8 +8,18 @@ import { ReactElement } from "react";
 
 export default function HomePage() {
 
-    const [isPopupVisible, setIsPopupVisible] = useState(true);
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
     const [showCloseButton, setShowCloseButton] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const popupShown = sessionStorage.getItem("popupShown");
+            if (!popupShown) {
+                setIsPopupVisible(true);
+                sessionStorage.setItem("popupShown", "true");
+            }
+        }
+    }, []);
 
     const handleClosePopup = () => {
         setIsPopupVisible(false);

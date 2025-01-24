@@ -37,7 +37,7 @@ export function LoginForm() {
             await signInWithEmailAndPassword(auth, data.email, data.password);
         }
         catch (error) {
-            let errorMessage = 'Unknown error occurred while signing in.';
+            let errorMessage = 'Verifique su correo y contraseña.';
 
             if (isFirebaseError(error) && firebaseErrorRecord[error.code]) {
                 errorMessage = firebaseErrorRecord[error.code];
@@ -51,7 +51,7 @@ export function LoginForm() {
         try {
             await signInWithPopup(auth, googleProvider);
         } catch (error) {
-            let errorMessage = 'Unknown error occurred while signing in with Google.';
+            let errorMessage = 'A ocurrido algún error al intentar iniciar sesión con Google.';
             if (isFirebaseError(error) && firebaseErrorRecord[error.code]) {
                 errorMessage = firebaseErrorRecord[error.code];
             }
@@ -89,7 +89,7 @@ export function LoginForm() {
                                 <FormItem>
                                     <FormLabel>Contraseña</FormLabel>
                                     <FormControl>
-                                        <Input required placeholder="Contraseña..." {...field} className="text-black" />
+                                        <Input type="password" required placeholder="Contraseña..." {...field} className="text-black" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -116,7 +116,7 @@ export function LoginForm() {
                                     alt="Google Logo"
                                     className="h-5 w-5"
                                 />
-                                <span className="font-medium">Ingresar com Google</span>
+                                <span className="font-medium">Ingresar con Google</span>
                             </>
                         )}
                     </Button>

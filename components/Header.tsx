@@ -74,7 +74,7 @@ export default function Navigation(props: Props) {
                                     </>
                                 ) : (
                                     <>
-                                        <NextLink href="/registro" className="block text-lg font-medium">Registro</NextLink>
+                                        <NextLink href="/sign-up" className="block text-lg font-medium">Registro</NextLink>
                                         <NextLink href="/login" className="block text-lg font-medium">Ingreso</NextLink>
                                     </>
                                 )}

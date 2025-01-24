@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure, protectedUserProcedure } from "@/server/api/trpc";
-import { adminAuth } from '@/server/lib/firebaseAdmin';
+//import { adminAuth } from '@/server/lib/firebaseAdmin';
+import { adminAuth } from '../../lib/firebaseAdmin';
 import { UserRecord } from "firebase-admin/lib/auth/user-record";
 //import { prisma } from "@/server/lib/prisma";
 import { PrismaClient, UserAccount } from '@prisma/client';
