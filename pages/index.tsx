@@ -185,7 +185,7 @@ export default function HomePage() {
                         </div>
 
                         {/* Columna de la imagen a la derecha */}
-                        <div className="flex justify-start md:justify-start space-x-4">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-4">
                             <Image
                                 src="/images/Virtualizacion_limpiopungo.jpg"
                                 alt="Laguna Limpiopungo"
