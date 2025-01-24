@@ -26,25 +26,23 @@ export default function RootLayout(props: {
                 
                 {/* Footer que solo aparece si el usuario está logueado */}
                 {user && (
-                    <footer className="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-4 flex justify-center space-x-4">
+                    <footer className="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-4 flex flex-wrap justify-center gap-4 sm:gap-6 px-4">
                         <a 
                             href="https://drive.google.com/uc?export=download&id=1SM2a6IDEreE4ek0kjyauJSeswBUtTmDt" 
                             download 
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center"
                         >
                             Descargar Paseo Virtual .EXE
                         </a>
                         
                         <a 
-                            href="https://drive.google.com/uc?export=download&id=1jNS1GLhFDwYCSGARJ_PyZJQoOFB3eKf9" 
-                            download 
-                            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                            href="https://drive.google.com/uc?export=download&id=1nilPI8LFkVc6EaxSjHdbd7ZseBK_DmoE" 
+                            download
+                            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-center"
                         >
                             Descargar Paseo Virtual APK
                         </a>
                     </footer>
-                
-                
                 )}
 
             </section>
